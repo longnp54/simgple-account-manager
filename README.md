@@ -6,6 +6,57 @@ A simple command-line password manager application built in C that demonstrates 
 
 This application allows users to store, retrieve, update, and delete account credentials (service name, username, and password) using a doubly-linked list data structure. The project demonstrates core C programming concepts and serves as a learning tool for understanding advanced C techniques.
 
+## Features
+
+- Add new account credentials
+- Delete existing accounts
+- Update username and password for existing accounts
+- Search for accounts by service name
+- Display all stored accounts
+
+## Usage Guide
+
+### Building and Running
+
+This project can be built using Visual Studio or any C compiler:
+
+```bash
+# Using GCC
+gcc main.c menu.c account.c -o password_manager
+
+# Run the application
+./password_manager
+```
+
+### Menu Options
+
+After launching the application, you'll see a menu with the following options:
+
+1. **Add Account** - Store new service credentials
+   - Enter the service name, username, and password when prompted
+
+2. **Delete Account** - Remove existing credentials
+   - Enter the service name of the account you want to delete
+
+3. **Update Account** - Change username/password for a service
+   - Enter the service name and then provide the new username and password
+
+4. **Search Account** - Find credentials by service name
+   - Enter the service name to display its associated username and password
+
+5. **Display Accounts** - Show all stored credentials
+   - Lists all accounts currently stored in memory
+
+6. **Exit** - Terminate the application
+
+### User Flow
+
+1. When launched, the application displays the menu of available options
+2. Select an option by entering the corresponding number (1-6)
+3. Follow the prompts to provide necessary information
+4. After completing an action, the menu is displayed again for the next operation
+5. To exit the application, select option 6
+
 ## Functionality Description
 
 The password manager provides a simple command-line interface for managing your account credentials:
@@ -17,22 +68,7 @@ The password manager provides a simple command-line interface for managing your 
 - **Searching**: Look up credentials by entering the service name.
 - **Displaying All Accounts**: List all stored credentials in the current session.
 
-### User Flow
-1. When launched, the application displays a menu of available options.
-2. The user selects an option by entering a number.
-3. The application prompts for necessary information based on the selected action.
-4. After completing an action, the menu is displayed again for the next operation.
-5. The user can exit the application at any time by selecting the exit option.
-
 All data is stored in memory using a doubly-linked list structure, allowing for efficient insertion, deletion, and traversal operations.
-
-## Features
-
-- Add new account credentials
-- Delete existing accounts
-- Update username and password for existing accounts
-- Search for accounts by service name
-- Display all stored accounts
 
 ## Project Structure
 
@@ -115,29 +151,6 @@ void forEachAccount(AccountCallback callback) {
 }
 ```
 
-## Building and Running
-
-This project can be built using Visual Studio or any C compiler:
-
-```bash
-# Using GCC
-gcc main.c menu.c account.c -o password_manager
-
-# Run the application
-./password_manager
-```
-
-## Usage
-
-After launching the application, you'll see a menu with options:
-
-1. Add Account - Store new service credentials
-2. Delete Account - Remove existing credentials
-3. Update Account - Change username/password for a service
-4. Search Account - Find credentials by service name
-5. Display Accounts - Show all stored credentials
-6. Exit - Terminate the application
-
 ## Educational Value
 
 This project serves as a practical example for learning:
@@ -163,4 +176,4 @@ This project serves as a practical example for learning:
 
 ## License
 
-Feel free to use and modify this code for educational
+Feel free to use and modify this code for educational purposes.
